@@ -163,7 +163,11 @@ open class TLS {
 extension TLS {
     #if !os(Linux)
     open class func importCert(at path: URL, password: String) -> Certificate {
-        let data = FileManager.default.contents(atPath: path.path)! as NSData
+        let data = FileManager.default.contents(atPath: path.path)!
+        return importCert(data: data, password: password)
+    }
+    open class func importCert(data d: Data, password: String) -> Certificate {
+        let data = d as NSData
         let options: NSDictionary = [kSecImportExportPassphrase: password]
 
         var items: CFArray?
@@ -176,7 +180,6 @@ extension TLS {
         let certs = [secIdentity] + ccerts.dropFirst().map { $0 as Any }
         return certs as CFArray
     }
-    
     #else
     open class func importCert(at path: URL, withKey key: URL, password: String?) -> Certificate {
         var certLen = 0
