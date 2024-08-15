@@ -3,7 +3,6 @@
 [![Cocoapods Compatible](https://img.shields.io/cocoapods/v/Socket.swift.svg)](https://cocoapods.org/pods/Socket.swift)
 [![Carthage Compatible](https://img.shields.io/badge/carthage-compatible-brightgreen.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](https://img.shields.io/github/license/BiAtoms/Socket.swift.svg)](https://github.com/BiAtoms/Socket.swift/blob/master/LICENSE)
-[![Build Status - Master](https://travis-ci.org/BiAtoms/Socket.swift.svg?branch=master)](https://travis-ci.org/BiAtoms/Socket.swift)
 
 # Socket.swift
 
@@ -13,10 +12,7 @@ A POSIX socket wrapper written in swift.
  
 - TLS/SSL support
 - Linux, iOS, macOS and tvOS support
-- Clean and understanable code
-
-
-If you consider something needs to be implemented, just [open an issue](https://github.com/BiAtoms/Socket.swift/issues/new) or make a PR
+- Clean and understandable code
 
 
 ## Example
